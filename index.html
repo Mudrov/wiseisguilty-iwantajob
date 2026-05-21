@@ -4,310 +4,185 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pavel Mudrov — Junior 3D Artist</title>
-  <link rel="icon" type="image/png" href="assets/logo.jpg">
-	<link rel="apple-touch-icon" href="assets/logo.jpg">
-  <meta name="description" content="Portfolio of Pavel Mudrov — Junior 3D Artist / Hard Surface Props Artist. Blender, Substance 3D Painter, game art and personal game project." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio of Pavel Mudrov — beginner 3D Artist. Blender, Substance 3D Painter, Marvelous Designer, atmospheric renders and a personal point-and-click game project." />
+  <meta name="theme-color" content="#090a0d" />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <link rel="apple-touch-icon" href="assets/logo.jpg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="page-bg" aria-hidden="true"></div>
+
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="logo" href="#top">
-        <!-- <span class="logo-dot"></span> -->
-		<img src="assets/logo.jpg" alt ="Pvel Mudrov logo" class ="logo-dot">
-        <span>Pavel Mudrov</span>
+      <a class="brand" href="#home" data-page-link="home" aria-label="Pavel Mudrov portfolio">
+        <img src="assets/logo.jpg" alt="Pavel Mudrov logo" class="brand-mark" />
+        <span class="brand-text">Pavel Mudrov</span>
       </a>
-      <nav class="nav" id="mainNav">
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#portfolio" data-i18n="navPortfolio">Portfolio</a>
-        <a href="#project" data-i18n="navGame">My game</a>
-        <a href="#skills" data-i18n="navSkills">Skills</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#home" data-page-link="home" data-i18n="navHome">Home</a>
+        <a href="#about" data-page-link="about" data-i18n="navAbout">About</a>
+        <a href="#portfolio" data-page-link="portfolio" data-i18n="navPortfolio">Portfolio</a>
+        <a href="#game" data-page-link="game" data-i18n="navGame">My game</a>
+        <a href="#contact" data-page-link="contact" data-i18n="navContact">Contact</a>
       </nav>
+
       <div class="lang-switch" aria-label="Language switcher">
-        <button class="lang-btn is-active" type="button" data-lang="en">EN</button>
-        <button class="lang-btn" type="button" data-lang="ru">RU</button>
+        <button class="lang-btn is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn" type="button" data-lang="ru" aria-pressed="false">RU</button>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <div class="eyebrow" data-i18n="heroEyebrow">3D / Hard Surface Props</div>
-          <h1 data-i18n-html="heroTitle">I make<br><span class="accent-text">3D models</span><br>3D renders<br><span class="accent-text">games</span></h1>
-          <p class="hero-text" data-i18n="heroText">My name is Pavel Mudrov. I work with Blender, Substance 3D Painter and Marvelous Designer. I am building my portfolio and developing my own point-and-click game with a personal visual style in GameMaker Studio.</p>
-			<div class="hero-actions">
-			  <a class="btn btn-primary" href="#portfolio" data-i18n="heroBtnPortfolio">View portfolio</a>
-			  <a class="btn btn-secondary" href="#project" data-i18n="heroBtnGame">My game</a>
-			</div>
-          <ul class="hero-meta">
-            <li><span data-i18n="metaLocationLabel">Location</span><strong data-i18n="metaLocation">Kaliningrad, Russia</strong></li>
-            <li><span data-i18n="metaFormatLabel">Format</span><strong data-i18n="metaFormat">Remote / project work / internship / relocation</strong></li>
-            <li><span data-i18n="metaFocusLabel">Focus</span><strong data-i18n="metaFocus">Hard Surface, game art, continuous growth</strong></li>
-          </ul>
-        </div>
+    <section class="page-panel is-active" id="home" data-page="home">
+      <div class="hero section">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <div class="eyebrow" data-i18n="heroEyebrow">3D Artist / Hard Surface Props</div>
+            <h1 data-i18n-html="heroTitle">Atmospheric 3D renders, hard-surface practice and personal game worlds.</h1>
+            <p class="lead" data-i18n="heroText">My name is Pavel Mudrov. I work with Blender, Substance 3D Painter and Marvelous Designer. I am building a 3D portfolio and developing my own point-and-click game in GameMaker Studio.</p>
 
-        <div class="hero-card reveal delay-1">
-          <div class="hero-card-glow"></div>
-          <div class="hero-panel panel-top">
-            <span class="status-dot"></span>
-            <span data-i18n="statusOpen">Open for work</span>
-          </div>
-          <div class="hero-panel panel-center">
-            <div class="main-stat">
-              <span class="main-stat-label" data-i18n="mainStatLabel">Focus</span>
-              <strong data-i18n="mainStatValue">Game development & 3D art</strong>
-            </div>
-            <div class="mini-grid">
-              <div class="mini-card">
-                <span>Tools</span>
-                <strong data-i18n-html="toolsList">Blender<br>Substance 3D Painter<br>Marvelous Designer<br>GameMaker Studio<br>Unreal Engine 5 — planned</strong>
-              </div>
-              <div class="mini-card">
-                <span>Style</span>
-                <strong data-i18n="styleAny">Flexible</strong>
-              </div>
-              <div class="mini-card">
-                <span>Pipeline</span>
-                <strong>Modeling<br>UV<br>Baking<br>Texturing</strong>
-              </div>
-              <div class="mini-card">
-                <span>Project</span>
-                <strong data-i18n="projectCardValue">Point-and-click adventure</strong>
-              </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#portfolio" data-page-link="portfolio" data-i18n="heroBtnPortfolio">View portfolio</a>
+              <a class="btn btn-secondary" href="#contact" data-page-link="contact" data-i18n="heroBtnContact">Contact me</a>
             </div>
           </div>
-          <div class="hero-panel panel-bottom">
-            <div class="scanline"></div>
-          </div>
+
+          <aside class="hero-card" aria-label="Current focus">
+            <div class="hero-card-top">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span data-i18n="statusOpen">Open for work</span>
+            </div>
+            <div class="hero-logo-wrap">
+              <img src="assets/logo.jpg" alt="Pavel Mudrov logo" />
+            </div>
+            <div class="hero-card-content">
+              <span class="small-label" data-i18n="mainStatLabel">Current direction</span>
+              <strong data-i18n="mainStatValue">3D art & personal game project</strong>
+              <p data-i18n="mainStatText">Portfolio work, atmospheric renders, props, locations and a personal point-and-click project.</p>
+            </div>
+            <div class="tool-strip" aria-label="Tools">
+              <span>Blender</span>
+              <span>Substance Painter</span>
+              <span>Marvelous Designer</span>
+              <span>GameMaker</span>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow" data-i18n="aboutEyebrow">About me</div>
-          <h2 data-i18n="aboutTitle">Looking for work, freelance tasks or an internship</h2>
-        </div>
-        <div class="about-grid">
-          <article class="glass-card reveal">
-            <p data-i18n-html="aboutText1">I am a beginner 3D Artist with a focus on <strong>hard-surface</strong> modeling, 3D art and atmospheric environments. I work with <strong>Blender</strong>, <strong>Substance 3D Painter</strong> and <strong>Marvelous Designer</strong>: modeling, UVs, baking, texturing and learning the game asset pipeline.</p><p data-i18n-html="aboutText2">I am currently building my portfolio and developing a personal project: a classic <strong>point-and-click</strong> adventure. I create mechanics, logic, locations, interactive objects and the overall visual style of the world.</p>
-          </article>
-          <article class="glass-card reveal delay-1">
-            <ul class="feature-list">
-              <li>
-                <span class="feature-bullet"></span>
-                <span data-i18n="feature1">I am especially interested in game development, but I am open to different 3D-related tasks.</span>
-              </li>
-              <li>
-                <span class="feature-bullet"></span>
-                <span data-i18n="feature2">Looking for an internship, junior position or project-based work.</span>
-              </li>
-              <li>
-                <span class="feature-bullet"></span>
-                <span data-i18n="feature3Prefix">Telegram blog:</span> <a href="https://t.me/wiseisguilty3D" target="_blank" rel="noopener">t.me/wiseisguilty3D</a>
-              </li>
-			  <li>
-                <span class="feature-bullet"></span>
-                <span data-i18n="feature4Prefix">Instagram blog:</span> <a href="https://www.instagram.com/wiseisguilty.3d" target="_blank" rel="noopener">instagram.com/wiseisguilty.3d</a>
-              </li>
+    <section class="page-panel" id="about" data-page="about">
+      <div class="section">
+        <div class="container two-column">
+          <div class="section-head">
+            <div class="eyebrow" data-i18n="aboutEyebrow">About me</div>
+            <h2 data-i18n="aboutTitle">Junior 3D Artist focused on 3D art and atmospheric scenes</h2>
+          </div>
+
+          <div class="text-card">
+            <p data-i18n-html="aboutText1">I am a beginner 3D Artist with a focus on <strong>hard-surface</strong> modeling, 3D art and atmospheric environments. I work with <strong>Blender</strong>, <strong>Substance 3D Painter</strong> and <strong>Marvelous Designer</strong>: modeling, UVs, baking, texturing and learning the 3D pipeline.</p>
+            <p data-i18n-html="aboutText2">I am currently building my portfolio and developing a personal project: a classic <strong>point-and-click</strong> adventure. I create mechanics, logic, locations, interactive objects and the overall visual style of the world.</p>
+            <ul class="clean-list">
+              <li data-i18n="feature1">Interested in game development, but open to different 3D-related tasks.</li>
+              <li data-i18n="feature2">Looking for an internship, junior position or project-based work.</li>
+              <li><span data-i18n="feature3Prefix">Telegram blog:</span> <a href="https://t.me/wiseisguilty3D" target="_blank" rel="noopener">t.me/wiseisguilty3D</a></li>
+              <li><span data-i18n="feature4Prefix">Instagram blog:</span> <a href="https://www.instagram.com/wiseisguilty.3d" target="_blank" rel="noopener">instagram.com/wiseisguilty.3d</a></li>
             </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="portfolio">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow" data-i18n="portfolioEyebrow">Portfolio</div>
-          <h2 data-i18n="portfolioTitle">Selected works</h2>
-          <p data-i18n="portfolioIntro">The cards are interactive: click any work to open a larger preview.</p>
-        </div>
-
-        <div class="portfolio-grid">
-          <article class="portfolio-card reveal" data-title="Lonzo’s bar" data-title-en="Lonzo’s bar" data-title-ru="бар Лонзо" data-subtitle="A reinterpretation of the original 2D background" data-subtitle-en="A reinterpretation of the original 2D background" data-subtitle-ru="переосмысление 2D-задника из оригинала" data-tools="Blender · Substance Painter" data-desc="A detailed scene with many hard-surface props and some amateur sculpting. The scene was built in Blender; baking and texturing were done in Substance 3D Painter." data-desc-en="A detailed scene with many hard-surface props and some amateur sculpting. The scene was built in Blender; baking and texturing were done in Substance 3D Painter." data-desc-ru="Очень много деталей, в основном хард сёрфейс, немного любительского скульптинга (голова справа), вся работа в Blender, запекание и текстурирование в Substance">
-            <div class="portfolio-visual visual-1">
-              <img src="assets/portfolio/pic1.jpg" alt="pic1">
-            </div>
-            <div class="portfolio-info">
-              <h3 data-i18n="work1Title">Reconstruction of Lonzo’s bar from “Deponia”</h3>
-              <p data-i18n="work1Subtitle">A scene with many hard-surface props</p>
-              <span>Blender · Substance Painter</span>
-            </div>
-          </article>
-
-          <article class="portfolio-card reveal delay-1" data-title="Owl Guy" data-title-en="Owl Guy" data-title-ru="Owl Guy" data-subtitle="My mascot" data-subtitle-en="My mascot" data-subtitle-ru="мой маскот" data-tools="Blender · Substance Painter · Marvelous Designer" data-desc="An older personal mascot model. Posed in Blender; the background was added in Krita." data-desc-en="An older personal mascot model. Posed in Blender; the background was added in Krita." data-desc-ru="Сделал его давно, запозил его в Blender, фон добавил через Krita">
-            <div class="portfolio-visual visual-2">
-             <img src="assets/portfolio/pic2.jpg" alt="hui">
-            </div>
-            <div class="portfolio-info">
-              <h3 data-i18n="work2Title">Owl Guy with a bat</h3>
-              <p data-i18n="work2Subtitle">My mascot and one of my favorite works</p>
-              <span>Blender · Substance Painter · Marvelous Designer</span>
-            </div>
-          </article>
-
-          <article class="portfolio-card reveal delay-2" data-title="TARDIS" data-title-en="TARDIS" data-title-ru="Тардис" data-subtitle="A recognizable element from a popular TV series" data-subtitle-en="A recognizable element from a popular TV series" data-subtitle-ru="узнаваемый элемент популярного сериала" data-tools="Blender · Substance Painter" data-desc="A personal fan art piece made for fun." data-desc-en="A personal fan art piece made for fun." data-desc-ru="Для души">
-            <div class="portfolio-visual visual-3">
-			<img src="assets/portfolio/pic3.jpg" alt="hui">
-            </div>
-            <div class="portfolio-info">
-              <h3 data-i18n="work3Title">TARDIS in space</h3>
-              <p data-i18n="work3Subtitle">Why not?</p>
-              <span>Blender · Substance Painter</span>
-            </div>
-          </article>
-
-          <article class="portfolio-card reveal" data-title="Demonic hand" data-title-en="Demonic hand" data-title-ru="Демоническая рука" data-subtitle="Simple and atmospheric" data-subtitle-en="Simple and atmospheric" data-subtitle-ru="просто и атмосферно" data-tools="Blender · Substance Painter" data-desc="The sculpt, retopology and UVs were done in Blender. Baking and texturing were done in Substance 3D Painter." data-desc-en="The sculpt, retopology and UVs were done in Blender. Baking and texturing were done in Substance 3D Painter." data-desc-ru="Скульпт в самом Blender, как и ретопология, развертка. Запекание и текстурирование в Substance">
-            <div class="portfolio-visual visual-4">
-			<img src="assets/portfolio/pic6.jpg" alt="hui">
-            </div>
-            <div class="portfolio-info">
-              <h3 data-i18n="work4Title">Demonic hand from the floor</h3>
-              <p data-i18n="work4Subtitle">Hand sculpt plus a small hard-surface environment</p>
-              <span>Blender · Substance Painter</span>
-            </div>
-          </article>
-
-          <article class="portfolio-card reveal delay-1" data-title="Abandoned kitchen" data-title-en="Abandoned kitchen" data-title-ru="Кухня на заброшке" data-subtitle="Is anybody here?" data-subtitle-en="Is anybody here?" data-subtitle-ru="здесь кто-нибудь есть?" data-tools="Blender · Substance Painter" data-desc="The trees are third-party assets. The scene setup, lighting and fog are mine." data-desc-en="The trees are third-party assets. The scene setup, lighting and fog are mine." data-desc-ru="Деревья не мои. Вся сцена, освещение и туман мои">
-            <div class="portfolio-visual visual-5">
-			<img src="assets/portfolio/pic4.jpg" alt="hui">
-            </div>
-            <div class="portfolio-info">
-              <h3 data-i18n="work5Title">Abandoned kitchen</h3>
-              <p data-i18n="work5Subtitle">The trees are third-party assets</p>
-              <span>Blender · Substance Painter</span>
-            </div>
-          </article>
-
-          <article class="portfolio-card reveal delay-2" data-title="Blot creature" data-title-en="Blot creature" data-title-ru="Клякса" data-subtitle="A bit of surrealism" data-subtitle-en="A bit of surrealism" data-subtitle-ru="немного сюрреализма" data-tools="Blender · Substance Painter" data-desc="A surreal / horror-leaning sculpting experiment with a grainy atmosphere." data-desc-en="A surreal / horror-leaning sculpting experiment with a grainy atmosphere." data-desc-ru="Люблю сюр, хоррор, зернитость...">
-            <div class="portfolio-visual visual-6">
-<img src="assets/portfolio/pic5.jpg" alt="hui">
-            </div>
-            <div class="portfolio-info">
-              <h3 data-i18n="work6Title">Blot creature</h3>
-              <p data-i18n="work6Subtitle">Sculpting</p>
-              <span>Blender · Substance Painter</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="project">
-      <div class="container project-grid">
-        <div class="section-head reveal">
-          <div class="eyebrow" data-i18n="gameEyebrow">My game</div>
-          <h2 data-i18n="gameTitle">Personal project</h2>
-          <p data-i18n="gameIntro">I am developing an atmospheric point-and-click game with 3D-rendered backgrounds.</p>
-        </div>
-
-        <div class="project-showcase reveal delay-1">
-          <div class="project-screen">
-            <div class="screen-header">
-              <span></span><span></span><span></span>
-            </div>
-<div class="screen-body">
-  <button class="game-shot-card" type="button"
-    data-title="Game screenshot 01" data-title-en="Game screenshot 01" data-title-ru="Скриншот игры 01"
-    data-subtitle="A location from my personal point-and-click project" data-subtitle-en="A location from my personal point-and-click project" data-subtitle-ru="Локация из личного point-and-click проекта"
-    data-desc="One of the rendered screens for my personal project. It is used as a 3D background for a game scene." data-desc-en="One of the rendered screens for my personal project. It is used as a 3D background for a game scene." data-desc-ru="Один из экранов рендоров для личного проекта. Используется как 3D-задник для сцены.">
-    <img class="game-shot" src="assets/game/scr1.jpg" alt="Скриншот игры 01">
-  </button>
-
-  <button class="game-shot-card" type="button"
-    data-title="Game screenshot 02" data-title-en="Game screenshot 02" data-title-ru="Скриншот игры 02"
-    data-subtitle="A location from my personal point-and-click project" data-subtitle-en="A location from my personal point-and-click project" data-subtitle-ru="Локация из личного point-and-click проекта"
-    data-desc="A scene from my personal project with a 3D background and an interactive composition." data-desc-en="A scene from my personal project with a 3D background and an interactive composition." data-desc-ru="Сцена из личного проекта с 3D-задником и интерактивной композицией.">
-    <img class="game-shot" src="assets/game/scr2.jpg" alt="Скриншот игры 02">
-  </button>
-
-  <button class="game-shot-card" type="button"
-    data-title="Game screenshot 03" data-title-en="Game screenshot 03" data-title-ru="Скриншот игры 03"
-    data-subtitle="A location from my personal point-and-click project" data-subtitle-en="A location from my personal point-and-click project" data-subtitle-ru="Локация из личного point-and-click проекта"
-    data-desc="A fragment of the game’s visual direction: environment, mood and composition." data-desc-en="A fragment of the game’s visual direction: environment, mood and composition." data-desc-ru="Фрагмент визуального направления игры: окружение, настроение, композиция.">
-    <img class="game-shot" src="assets/game/scr3.jpg" alt="Скриншот игры 03">
-  </button>
-</div>
-          </div>
-          <div class="project-points">
-            <div class="point-card">
-              <strong data-i18n="gameGenreLabel">Genre</strong>
-              <span data-i18n="gameGenre">Point-and-click adventure</span>
-            </div>
-            <div class="point-card">
-              <strong data-i18n="gameVisualLabel">Visual style</strong>
-              <span data-i18n="gameVisual">Alternative future, space and a touch of post-Soviet atmosphere</span>
-            </div>
-            <div class="point-card">
-              <strong data-i18n="gameRoleLabel">Role</strong>
-              <span data-i18n="gameRole">I handle the full pipeline myself after work, so progress is slower, but the project is actively moving forward.</span>
-            </div>
           </div>
         </div>
       </div>
+      <div class="container"><div class="contact-card compact-contact" data-contact-block></div></div>
     </section>
 
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow" data-i18n="skillsEyebrow">Skills</div>
-          <h2 data-i18n="skillsTitle">Tools and pipeline</h2>
-        </div>
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-            <h3>Tools</h3>
-            <ul>
-              <li>Blender</li>
-              <li>Substance 3D Painter</li>
-              <li>Marvelous Designer</li>
-            </ul>
-          </article>
-          <article class="skill-card reveal delay-1">
-            <h3>Core Skills</h3>
-            <ul>
-              <li data-i18n="skillHardSurface">Hard Surface modeling</li>
-              <li data-i18n="skillUV">UV unwrapping</li>
-              <li data-i18n="skillTexturing">Texturing</li>
-              <li data-i18n="skillBaking">Baking</li>
-			  <li data-i18n="skillRenderSetup">Render scene setup</li>
-            </ul>
-          </article>
-          <article class="skill-card reveal delay-2">
-            <h3>Focus Areas</h3>
-            <ul>
-              <li data-i18n="focusGameDev">Game development</li>
-              <li data-i18n="focusViz">3D visualization</li>
-              <li data-i18n="focusScenes">Artworks and scenes</li>
-              <li data-i18n="focusStory">Visual storytelling</li>
-            </ul>
-          </article>
+    <section class="page-panel" id="portfolio" data-page="portfolio">
+      <div class="section portfolio-section">
+        <div class="container">
+          <div class="section-head wide-head">
+            <div>
+              <div class="eyebrow" data-i18n="portfolioEyebrow">Portfolio</div>
+              <h2 data-i18n="portfolioTitle">Selected works</h2>
+            </div>
+            <p data-i18n="portfolioIntro">A compact selection of current works. Click a card to open a larger preview and details.</p>
+          </div>
+
+          <div class="portfolio-grid">
+            <article class="portfolio-card featured-card" tabindex="0" data-title-en="Lonzo’s bar" data-title-ru="Бар Лонзо" data-subtitle-en="A reinterpretation of the original 2D background" data-subtitle-ru="Переосмысление 2D-задника из оригинала" data-tools="Blender · Substance Painter" data-desc-en="A detailed scene with many hard-surface props and some amateur sculpting. The scene was built in Blender; baking and texturing were done in Substance 3D Painter." data-desc-ru="Очень много деталей, в основном hard-surface, немного любительского скульптинга. Вся работа сделана в Blender, запекание и текстурирование — в Substance 3D Painter.">
+              <div class="portfolio-visual"><img src="assets/portfolio/pic1.jpg" alt="Lonzo’s bar 3D reconstruction" /></div>
+              <div class="portfolio-info"><span class="card-kicker">Blender · Substance Painter</span><h3 data-i18n="work1Title">Reconstruction of Lonzo’s bar from “Deponia”</h3><p data-i18n="work1Subtitle">A scene with many hard-surface props</p></div>
+            </article>
+
+            <article class="portfolio-card" tabindex="0" data-title-en="Owl Guy" data-title-ru="Owl Guy" data-subtitle-en="My mascot" data-subtitle-ru="Мой маскот" data-tools="Blender · Substance Painter · Marvelous Designer" data-desc-en="An older personal mascot model. Posed in Blender; the background was added in Krita." data-desc-ru="Один из старых личных маскотов. Поза сделана в Blender, фон добавлен через Krita.">
+              <div class="portfolio-visual"><img src="assets/portfolio/pic2.jpg" alt="Owl Guy mascot with a bat" /></div>
+              <div class="portfolio-info"><span class="card-kicker">Blender · Substance Painter · Marvelous Designer</span><h3 data-i18n="work2Title">Owl Guy with a bat</h3><p data-i18n="work2Subtitle">My mascot and one of my favorite works</p></div>
+            </article>
+
+            <article class="portfolio-card" tabindex="0" data-title-en="TARDIS" data-title-ru="Тардис" data-subtitle-en="A recognizable element from a popular TV series" data-subtitle-ru="Узнаваемый элемент популярного сериала" data-tools="Blender · Substance Painter" data-desc-en="A personal fan art piece made for fun." data-desc-ru="Фан-арт для души.">
+              <div class="portfolio-visual"><img src="assets/portfolio/pic3.jpg" alt="TARDIS in space 3D render" /></div>
+              <div class="portfolio-info"><span class="card-kicker">Blender · Substance Painter</span><h3 data-i18n="work3Title">TARDIS in space</h3><p data-i18n="work3Subtitle">Why not?</p></div>
+            </article>
+
+            <article class="portfolio-card" tabindex="0" data-title-en="Demonic hand" data-title-ru="Демоническая рука" data-subtitle-en="Simple and atmospheric" data-subtitle-ru="Просто и атмосферно" data-tools="Blender · Substance Painter" data-desc-en="The sculpt, retopology and UVs were done in Blender. Baking and texturing were done in Substance 3D Painter." data-desc-ru="Скульпт, ретопология и развёртка сделаны в Blender. Запекание и текстурирование — в Substance 3D Painter.">
+              <div class="portfolio-visual"><img src="assets/portfolio/pic6.jpg" alt="Demonic hand sculpt and environment" /></div>
+              <div class="portfolio-info"><span class="card-kicker">Blender · Substance Painter</span><h3 data-i18n="work4Title">Demonic hand from the floor</h3><p data-i18n="work4Subtitle">Hand sculpt plus a small hard-surface environment</p></div>
+            </article>
+
+            <article class="portfolio-card" tabindex="0" data-title-en="Abandoned kitchen" data-title-ru="Кухня на заброшке" data-subtitle-en="Is anybody here?" data-subtitle-ru="Здесь кто-нибудь есть?" data-tools="Blender · Substance Painter" data-desc-en="The trees are third-party assets. The scene setup, lighting and fog are mine." data-desc-ru="Деревья — сторонние ассеты. Сцена, освещение и туман — мои.">
+              <div class="portfolio-visual"><img src="assets/portfolio/pic4.jpg" alt="Abandoned kitchen 3D render" /></div>
+              <div class="portfolio-info"><span class="card-kicker">Blender · Substance Painter</span><h3 data-i18n="work5Title">Abandoned kitchen</h3><p data-i18n="work5Subtitle">The trees are third-party assets</p></div>
+            </article>
+
+            <article class="portfolio-card" tabindex="0" data-title-en="Blot creature" data-title-ru="Клякса" data-subtitle-en="A bit of surrealism" data-subtitle-ru="Немного сюрреализма" data-tools="Blender · Substance Painter" data-desc-en="A surreal / horror-leaning sculpting experiment with a grainy atmosphere." data-desc-ru="Сюрреалистичный эксперимент со скульптингом и зернистой атмосферой.">
+              <div class="portfolio-visual"><img src="assets/portfolio/pic5.jpg" alt="Surreal blot creature sculpt" /></div>
+              <div class="portfolio-info"><span class="card-kicker">Blender · Substance Painter</span><h3 data-i18n="work6Title">Blot creature</h3><p data-i18n="work6Subtitle">Sculpting</p></div>
+            </article>
+
+            <article class="portfolio-card featured-card" tabindex="0" data-title-en="Drum kit" data-title-ru="Ударная установка" data-subtitle-en="My passion" data-subtitle-ru="Моя страсть" data-tools="Blender · Substance Painter" data-desc-en="I transferred my hobby into 3D." data-desc-ru="Перенес свое хобби в 3D.">
+              <div class="portfolio-visual"><img src="assets/portfolio/pic7.jpg" alt="Drum kit render placeholder" /></div>
+              <div class="portfolio-info"><span class="card-kicker">Blender · Substance Painter</span><h3 data-i18n="work7Title">Drum kit</h3><p data-i18n="work7Subtitle">My passion</p></div>
+            </article>
+          </div>
         </div>
       </div>
+      <div class="container"><div class="contact-card compact-contact" data-contact-block></div></div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-card reveal">
-          <div>
-            <div class="eyebrow" data-i18n="contactEyebrow">Contact</div>
-            <h2 data-i18n="contactTitle">Let’s discuss work, an internship or a project</h2>
-            <p data-i18n="contactText">If you need a beginner 3D artist who wants to grow professionally and is ready to put real effort into the work — feel free to contact me.</p>
+    <section class="page-panel" id="game" data-page="game">
+      <div class="section">
+        <div class="container project-layout">
+          <div class="project-copy">
+            <div class="eyebrow" data-i18n="gameEyebrow">My game</div>
+            <h2 data-i18n="gameTitle">Personal project</h2>
+            <p data-i18n="gameIntro">I am developing an atmospheric point-and-click game with 3D-rendered backgrounds.</p>
+
+            <div class="project-points">
+              <div><strong data-i18n="gameGenreLabel">Genre</strong><span data-i18n="gameGenre">Point-and-click adventure</span></div>
+              <div><strong data-i18n="gameVisualLabel">Visual style</strong><span data-i18n="gameVisual">Alternative future, space and a touch of post-Soviet atmosphere</span></div>
+              <div><strong data-i18n="gameRoleLabel">Role</strong><span data-i18n="gameRole">I handle the full pipeline myself after work, so progress is slower, but the project is actively moving forward.</span></div>
+            </div>
           </div>
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="mailto:pavel.s.mudrov@gmail.com">pavel.s.mudrov@gmail.com</a>
-            <a class="btn btn-secondary" href="https://t.me/wiseisguilty3D" target="_blank" rel="noopener">Telegram / blog</a>
-            <a class="btn btn-secondary" href="https://www.instagram.com/wiseisguilty.3d" target="_blank" rel="noopener">Instagram / blog</a>
+
+          <div class="game-gallery" aria-label="Game screenshots">
+            <button class="game-shot-card large" type="button" data-title-en="Game screenshot 01" data-title-ru="Скриншот игры 01" data-subtitle-en="A location from my personal point-and-click project" data-subtitle-ru="Локация из личного point-and-click проекта" data-desc-en="One of the rendered screens for my personal project. It is used as a 3D background for a game scene." data-desc-ru="Один из экранов рендеров для личного проекта. Используется как 3D-задник для сцены." data-tools="GameMaker Studio · Blender">
+              <img class="game-shot" src="assets/game/scr1.jpg" alt="Game screenshot 01" />
+            </button>
+            <button class="game-shot-card" type="button" data-title-en="Game screenshot 02" data-title-ru="Скриншот игры 02" data-subtitle-en="A location from my personal point-and-click project" data-subtitle-ru="Локация из личного point-and-click проекта" data-desc-en="Placeholder image until the next project screenshot is ready." data-desc-ru="Заглушка до появления следующего скриншота проекта." data-tools="GameMaker Studio · Blender">
+              <img class="game-shot" src="assets/game/scr2.jpg" alt="Game screenshot 02 placeholder" />
+            </button>
+            <button class="game-shot-card" type="button" data-title-en="Game screenshot 03" data-title-ru="Скриншот игры 03" data-subtitle-en="A location from my personal point-and-click project" data-subtitle-ru="Локация из личного point-and-click проекта" data-desc-en="Placeholder image until the next project screenshot is ready." data-desc-ru="Заглушка до появления следующего скриншота проекта." data-tools="GameMaker Studio · Blender">
+              <img class="game-shot" src="assets/game/scr3.jpg" alt="Game screenshot 03 placeholder" />
+            </button>
           </div>
         </div>
+      </div>
+      <div class="container"><div class="contact-card compact-contact" data-contact-block></div></div>
+    </section>
+
+    <section class="page-panel" id="contact" data-page="contact">
+      <div class="section">
+        <div class="container"><div class="contact-card contact-full" data-contact-block></div></div>
       </div>
     </section>
   </main>
@@ -315,33 +190,24 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© 2026 Pavel Mudrov</span>
-      <a href="#top" data-i18n="footerTop">Back to top ↑</a>
+      <a href="#home" data-page-link="home" data-i18n="footerTop">Back to home ↑</a>
     </div>
   </footer>
 
-<div class="modal" id="portfolioModal" aria-hidden="true">
-  <div class="modal-backdrop" data-close-modal></div>
-
-  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal-close" id="modalClose" aria-label="Закрыть">×</button>
-
-    <div class="modal-preview">
-      <img id="modalImage" class="modal-image" src="" alt="">
-    </div>
-
-    <div class="modal-content">
-      <div class="modal-label" data-i18n="modalLabel">Image preview</div>
-      <h3 id="modalTitle"></h3>
-      <p class="modal-subtitle" id="modalSubtitle"></p>
-      <p class="modal-description" id="modalDescription"></p>
-
-      <div class="modal-tools">
-        <span data-i18n="modalToolsLabel">Tools</span>
-        <strong id="modalTools"></strong>
+  <div class="modal" id="portfolioModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+      <div class="modal-preview"><img id="modalImage" class="modal-image" src="" alt="" /></div>
+      <div class="modal-content">
+        <div class="modal-label" data-i18n="modalLabel">Image preview</div>
+        <h3 id="modalTitle"></h3>
+        <p class="modal-subtitle" id="modalSubtitle"></p>
+        <p class="modal-description" id="modalDescription"></p>
+        <div class="modal-tools"><span data-i18n="modalToolsLabel">Tools</span><strong id="modalTools"></strong></div>
       </div>
     </div>
   </div>
-</div>
 
   <script src="script.js"></script>
 </body>
